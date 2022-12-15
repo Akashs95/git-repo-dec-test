@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: this teplate will create ec2_instance,i am practicing for the first time with cf template
+
+Resources:
+ ec2instance:
+  Type: 'AWS::EC2::Instance'
+  Properties:
+   SecurityGroups: 
+     - !Ref SecurityGroup
+   ImageId: ami-0b0dcb5067f052a63
+   KeyName: AWS-KEY-JULY-2022
+   InstanceType: t2.micro
+ SecurityGroup: 
+  Type: 'AWS::EC2::SecurityGroup'
+  Properties:
+   GroupName: securityGroup-pract1
+   GroupDescription: Enable SSH access via port 22
+   SecurityGroupIngress: 
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 0.0.0.0/0
+                
+   
