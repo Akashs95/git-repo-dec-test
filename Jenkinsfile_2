@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh "aws cloudformation create-stack --stack-name test-stack-for-s3-webhook --template-body file://01b-S3.yml --region us-east-1"
+                echo "webhook added to check automation"
+            }
+        }    
+    }
+}    
