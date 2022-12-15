@@ -13,7 +13,7 @@ Resources:
  SecurityGroup: 
   Type: 'AWS::EC2::SecurityGroup'
   Properties:
-   GroupName: securityGroup-pract1
+   GroupName: securityGroup-pract2
    GroupDescription: Enable SSH access via port 22
    SecurityGroupIngress: 
         - IpProtocol: tcp
