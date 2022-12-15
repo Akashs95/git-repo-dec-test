@@ -5,10 +5,10 @@ Description: >-
   Create S3 Bucket with Default Properties and enable Static Website Properties
 
 Resources:
-  HelloBucket:
+  HelloBucketa:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: "demo-4-test-cicd-bucket-for-aws1234"
+      BucketName: "demo-5-test-cicd-bucket-for-aws1234"
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index123.html
